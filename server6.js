@@ -47,7 +47,7 @@ app.get("/", function(req, res) {
   // res.send("Welcome to the Star Wars Page!")
   res.sendFile(path.join(__dirname, "view.html"));
 });
-app.get("/form", function(req, res) {
+app.get("/add", function(req, res) {
   res.sendFile(path.join(__dirname, "add.html"));
 });
 
