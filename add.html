@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Star Wars - Express</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Star Wars Express</h1>
+            <h3>The greatest resource in the galaxy for Star Wars statistics!</h3>
+            <hr>
+            <button class="btn btn-danger btn-lg"><span class="fa fa-search"></span><a href="/">
+                    Search Character</a></button>
+        </div>
+        <div class="row">
+
+            <div class="col-12">
+
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h3><strong>Add Character</strong></h3>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST" action="/api/characters">
+
+                            <input type="text" id="character-name" class="form-control" class="addItem"
+                                placeholder="Character Name" name="name">
+                            <br>
+                            <input type="text" id="character-role" class="form-control" class="addItem"
+                                placeholder="Role" name="role">
+                            <br>
+                            <input type="text" id="character-age" class="form-control" class="addItem" placeholder="Age"
+                                name="age">
+                            <br>
+                            <input type="text" id="character-force" class="form-control" class="addItem"
+                                placeholder="Force Points" name="forcePoints">
+                            <br>
+                            <div class="text-right">
+                                <button type="submit" class="btn btn-primary btn-md" id="add-btn"><span
+                                        class="fa fa-plus"></span> Create Character</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3><strong>Character Statistics</strong></h3>
+                </div>
+                <div class="card-body">
+                    <h2 id="name">Yoda</h2>
+                    <div id="stats">
+                        <h3><strong>Role:</strong> <span id="role">Jedi Master</span></h3>
+                        <h3><strong>Age:</strong> <span id="age">900</span></h3>
+                        <h3><strong>Force Points:</strong> <span id="force-points">2000</span></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script type="text/javascript">
+        // QUESTION: What is this code doing?
+        // $("#add-btn").on("click", function () {
+        //     var charName = $("#character-name").val().trim();
+        //     var charRole = $("#character-role").val().trim();
+        //     var charAge = $("#character-age").val().trim();
+        //     var charForce = $("#character-force").val().trim();
+
+        //     charName = CharName.replace(/\s+/g, "").toLowerCase();
+        //     charRole = charRole.replace(/\s+/g, "").toLowerCase();
+
+        //     // QUESTION: What does $.get do? What are the parameters it is expecting?
+            });
+        });
+    </script>
+
+</body>
+
+</html>
